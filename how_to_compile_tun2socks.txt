@@ -1,0 +1,10 @@
+export TMPDIR=$HOME/tmp_ndk
+mkdir -p "$TMPDIR"
+export NDK_HOME=/path/to/Library/Android/sdk/ndk/27.0.12077973
+$NDK_HOME/ndk-build \
+    NDK_PROJECT_PATH=/path/to/v2rayNG \
+    APP_BUILD_SCRIPT=/path/to/v2rayNG/tun2socks.mk \
+    APP_ABI=all \
+    APP_PLATFORM=android-21 \
+    -j1
+
